@@ -1,0 +1,11 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+}
+
+.border-5 {
+    border-width: 5px !important; 
+}
