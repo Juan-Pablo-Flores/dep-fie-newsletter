@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import InterestGroup, Subscriber, Email
 
-# Register your models here.
+admin.site.register(InterestGroup)
+admin.site.register(Subscriber)
