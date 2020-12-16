@@ -25,5 +25,5 @@ class SentEmail(forms.Form):
     subject = models.CharField('Asunto', max_length=250)
     interest_groups = models.ManyToManyField(InterestGroup)
     content = models.TextField('Contenido')
-    
+    date_sent = models.DateTimeField('Fecha y Hora de Envio')
 
