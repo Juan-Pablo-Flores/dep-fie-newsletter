@@ -1,0 +1,9 @@
+{% extends "emails/base.html" %}
+{% block content %}
+    <h2 class="mt-5">Has Cerrado Tu Sesión</h2>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            <a href="{% url 'login' %}">Iniciar Sesión</a>
+        </small>
+    </div>
+{% endblock content %}
