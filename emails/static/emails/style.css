@@ -9,3 +9,7 @@ body {
 .border-5 {
     border-width: 5px !important; 
 }
+
+.text-in-border {
+    margin-bottom: -10px;
+}
