@@ -9,11 +9,11 @@ class InterestGroup(models.Model):
         return self.name
 
 class Subscriber(models.Model):
-    name = models.CharField('nombre', max_length=250)
+    name = models.CharField('Nombre', max_length=250)
     last_name = models.CharField('Apellido Paterno', max_length=250)
-    second_last_name = models.CharField('Apellido materno', max_length=250, blank=True, null=True)
+    second_last_name = models.CharField('Apellido Materno', max_length=250, blank=True, null=True)
     email = models.EmailField('email')
-    degree = models.CharField('Ultimo grado de estudios', max_length=250, blank=True, null=True)
+    degree = models.CharField('Ultimo Grado de Estudios', max_length=250, blank=True, null=True)
     company = models.CharField('Compania', max_length=250, blank=True, null=True)
     interest_groups = models.ManyToManyField(InterestGroup)
 
@@ -25,5 +25,7 @@ class SentEmail(forms.Form):
     subject = models.CharField('Asunto', max_length=250)
     interest_groups = models.ManyToManyField(InterestGroup)
     content = models.TextField('Contenido')
-    date_sent = models.DateTimeField('Fecha y Hora de Envio')
+    date_sent = models.DateTimeField('Fecha y Hora de Envio', auto_now_add=True)
 
+    def __str__(self):
+        return self.subject
