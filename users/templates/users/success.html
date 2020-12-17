@@ -1,0 +1,23 @@
+{% extends "emails/base.html" %}
+{% block content %}
+    <div class="content-section">
+            <h2 class="mt-5 pb-4 border-bottom border-info">Notificaci&oacute;n</h2>
+            {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+    </div>
+{% endblock content %}
+
+{% block redirectscript %} 
+<script>
+    function redirect(){
+       window.location.href = "http://dep.fie.umich.mx/";
+    }
+    
+    setTimeout(redirect, 3500); //2000 is equivalent to 2 seconds
+</script>
+{% endblock redirectscript %}
