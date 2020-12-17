@@ -20,7 +20,7 @@ class Subscriber(models.Model):
     def __str__(self):
         return self.name + " " + self.last_name + " " + self.second_last_name
 
-class SentEmail(forms.Form):
+class SentEmail(models.Model):
     sender = models.ForeignKey(User, on_delete=models.CASCADE)
     subject = models.CharField('Asunto', max_length=250)
     interest_groups = models.ManyToManyField(InterestGroup)
